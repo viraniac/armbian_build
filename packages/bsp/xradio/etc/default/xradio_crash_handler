@@ -1,0 +1,4 @@
+#handler=module_reload
+#handler=normal_reboot
+handler=kexec_reboot
+#handler=crash_kernel

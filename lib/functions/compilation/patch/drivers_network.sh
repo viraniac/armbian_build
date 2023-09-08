@@ -284,6 +284,9 @@ driver_xradio_xr819() {
 			process_patch_file "${SRC}/patch/misc/wireless-xradio-aarch64.patch" "applying"
 		fi
 
+		# allow crashing firmware via debugfs
+		process_patch_file "${SRC}/patch/misc/wireless-xradio-allow-to-crash-firmware-via-debugfs.patch" "applying"
+
 	fi
 
 }
