@@ -200,7 +200,7 @@ new file mode 100644
 index 0000000000..7bcbb07f96
 --- /dev/null
 +++ b/configs/orangepi_zero2w_defconfig
-@@ -0,0 +1,33 @@
+@@ -0,0 +1,34 @@
 +CONFIG_ARM=y
 +CONFIG_ARCH_SUNXI=y
 +CONFIG_DEFAULT_DEVICE_TREE="sun50i-h618-orangepi-zero2w"
@@ -234,3 +234,4 @@ index 0000000000..7bcbb07f96
 +CONFIG_USB_EHCI_HCD=y
 +CONFIG_USB_OHCI_HCD=y
 +CONFIG_USB_MUSB_GADGET=y
++CONFIG_USE_PREBOOT=n
