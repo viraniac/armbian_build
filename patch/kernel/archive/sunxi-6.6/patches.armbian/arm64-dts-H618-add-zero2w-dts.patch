@@ -36,7 +36,7 @@ new file mode 100644
 index 00000000000000..21ca1977055d95
 --- /dev/null
 +++ b/arch/arm64/boot/dts/allwinner/sun50i-h618-orangepi-zero2w.dts
-@@ -0,0 +1,215 @@
+@@ -0,0 +1,246 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
 +/*
 + * Copyright (C) 2023 Arm Ltd.
@@ -61,6 +61,17 @@ index 00000000000000..21ca1977055d95
 +
 +	chosen {
 +		stdout-path = "serial0:115200n8";
++	};
++
++	connector {
++		compatible = "hdmi-connector";
++		type = "d";
++
++		port {
++			hdmi_con_in: endpoint {
++				remote-endpoint = <&hdmi_out_con>;
++			};
++		};
 +	};
 +
 +	leds {
@@ -121,7 +132,27 @@ index 00000000000000..21ca1977055d95
 +	};
 +};
 +
++&de {
++	status = "okay";
++};
++
 +&ehci1 {
++	status = "okay";
++};
++
++&hdmi {
++	//hvcc-supply = <&reg_bldo1>;
++	status = "okay";
++};
++
++&hdmi_out {
++	hdmi_out_con: endpoint {
++		remote-endpoint = <&hdmi_con_in>;
++	};
++};
++
++&gpu {
++	mali-supply = <&reg_dcdc1>;
 +	status = "okay";
 +};
 +
