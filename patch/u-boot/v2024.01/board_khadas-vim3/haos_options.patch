@@ -1,0 +1,13 @@
+diff --git a/configs/khadas-vim3_defconfig b/configs/khadas-vim3_defconfig
+index 5df4b92143..875de2a500 100644
+--- a/configs/khadas-vim3_defconfig
++++ b/configs/khadas-vim3_defconfig
+@@ -102,3 +102,8 @@ CONFIG_VIDEO_BMP_RLE8=y
+ CONFIG_BMP_16BPP=y
+ CONFIG_BMP_24BPP=y
+ CONFIG_BMP_32BPP=y
++CONFIG_CMD_FILEENV=y
++CONFIG_CMD_SETEXPR=y
++CONFIG_FS_SQUASHFS=y
++CONFIG_CMD_SQUASHFS=y
++CONFIG_LZO=y
